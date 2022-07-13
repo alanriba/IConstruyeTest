@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>IConstruye.Api</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'IConstruye' " />
+  <ItemGroup>
+    <ProjectReference Include="..\IConstruye.Utils\IConstruye.Utils.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\IConstruye.Dac\IConstruye.Dac.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Controller\" />
+    <None Remove="Contract\" />
+    <None Remove="Business\" />
+    <None Remove="Options\" />
+    <None Remove="Filters\" />
+    <None Remove="Constants\" />
+    <None Remove="Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\" />
+    <Folder Include="Contract\" />
+    <Folder Include="Business\" />
+    <Folder Include="Options\" />
+    <Folder Include="Filters\" />
+    <Folder Include="Constants\" />
+    <Folder Include="Model\" />
+  </ItemGroup>
+</Project>
